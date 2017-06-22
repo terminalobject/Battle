@@ -1,2 +1,6 @@
-<%= @player1.player_name %> attacks <%= @player2.player_name %>
- <%= @player2.player_name %>: <%=@player2.health%>/100HP
+<%= @player1 %> attacked <%= @player2 %>
+ <%= @player2 %>: <%= @p2_health %>/100HP
+
+ <form action="/attack">
+   <input type="submit" value="Attack">
+ </form>
