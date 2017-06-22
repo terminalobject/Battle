@@ -2,10 +2,7 @@
 
 feature 'adding names to the game' do
   scenario 'submit names' do
-    visit('/')
-    fill_in('Player_1', with: 'Lily')
-    fill_in('Player_2', with: 'Dexter')
-    click_button('Submit')
+    sign_in_and_play
     expect(page).to have_content('Lily', 'Dexter')
   end
 end
