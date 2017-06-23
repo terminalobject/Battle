@@ -37,6 +37,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    shotgun (0.9.2)
+      rack (>= 1.0)
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -53,6 +55,7 @@ DEPENDENCIES
   capybara
   rack
   rspec
+  shotgun
   sinatra
 
 RUBY VERSION

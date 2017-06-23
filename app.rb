@@ -1,10 +1,11 @@
 #app.rb
 require 'sinatra/base'
+require 'shotgun'
 require './lib/player'
 require './lib/game'
 
 class Battle < Sinatra::Base
-  enable :sessions
+  # enable :sessions
   before do
     @game = Game.instance
   end
@@ -20,21 +21,13 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player1 = @game.player1.player_name
-    @player2 = @game.player2.player_name
-    @p1_health = @game.player1.health
-    @p2_health = @game.player2.health
     redirect to '/endgame' if @game.player1.dead? || @game.player2.dead?
     erb(:play)
   end
 
   get '/attack' do
-    @player1 = @game.player1.player_name
-    @player2 = @game.player2.player_name
     @game.attack
     @game.switch_turn
-    @p1_health = @game.player1.health
-    @p2_health = @game.player2.health
     erb(:attack)
   end
 

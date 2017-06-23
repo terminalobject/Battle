@@ -10,12 +10,12 @@ body  {
   </style>
 </head>
     <body>
-
-      <%= @player1 %> <%= @p1_health %>/100HP
+      <div float = "left">
+      <%= @game.player1.player_name %> <%= @game.player1.health %>/100HP </div>
        vs.
-        <br></br>
-        <%= @player2 %> <%= @p2_health %>/100HP
-
+        <div float = "right">
+        <%= @game.player2.player_name %> <%= @game.player2.health %>/100HP
+        </div>
       <form action="/attack">
         <input type="submit" value="Attack">
       </form>
