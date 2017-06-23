@@ -1,8 +1,25 @@
-<%= @player1 %>
- vs.
-  <%= @player2 %>
-  <%= @player2 %> <%= @p2_health %>/100HP
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Pokemon Battle</title>
+  <style>
+body  {
+    background-image: url("http://i.imgur.com/UZKEjzG.png");
+  }
+  </style>
+</head>
+    <body>
 
-<form action="/attack">
-  <input type="submit" value="Attack">
-</form>
+      <%= @player1 %>
+       vs.
+        <%= @player2 %>
+        <br></br>
+        <%= @player2 %> <%= @p2_health %>/100HP
+
+      <form action="/attack">
+        <input type="submit" value="Attack">
+      </form>
+
+    </body>
+  </html>
