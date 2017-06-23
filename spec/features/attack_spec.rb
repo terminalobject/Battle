@@ -12,6 +12,7 @@ feature 'decrease hp' do
   scenario 'hp reduced by 10' do
     sign_in_and_play
     click_button('Attack')
+    click_button('Keep playing')
     expect(page).to have_content 90
   end
 end
