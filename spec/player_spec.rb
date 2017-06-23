@@ -20,4 +20,11 @@ describe Player do
       expect(player.health).to eq described_class::MAX_HP
     end
   end
+
+  describe "dead?" do
+    it "returns true if health drops to 0" do
+      10.times {player.reduce_hp}
+      expect(player).to be_dead
+    end
+  end
 end
